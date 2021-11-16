@@ -13,7 +13,7 @@ function getDateParts(date) {
 	const hours = 0;
 	const minutes = 0;
 
-	console.log('Parsed date:', {year, month, day, hours, minutes});
+	// console.log('Parsed date:', {year, month, day, hours, minutes});
 
 	return {year, month, day, hours, minutes};
 }
@@ -59,8 +59,9 @@ function generateCalendar ({ start, weeksCount = WEEKS_COUNT } = {}) {
 	assert(start, 'start should be provided');
 
 	const startDate = getDateObject(start);
+	console.log(`Creating pregnancy calendar with start date = ${startDate.format('YYYY-MM-DD')} and weeks count = ${weeksCount}`);
+	
 	const events = generateEvents(startDate, weeksCount);
-
 	return ics.createEvents(events);
 }
 
