@@ -7,13 +7,13 @@ const argv = yargs(hideBin(process.argv))
 	.options({
 		'start': {
 			alias: 's',
-			describe: 'start date of last cycle in DD-MM-YYYY format',
+			describe: 'first date of the last period in YYYY-MM-DD format',
 			demandOption: true
 		},
 		'output': {
-			alias: 'p',
+			alias: 'o',
 			describe: 'output file for a calendar',
-			default: 'events.ics'
+			default: 'pregnancy-calendar.ics'
 		}
 	})
 	.help()
